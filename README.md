@@ -1,2 +1,2 @@
-# sillyprojects
-Just storing some of my little projects for reference.
+# Hello, I'm Victoria Chen. 
+I hope to be a programmer, so I thought I better store some of my little projects and old assignments for reference and portfolio sake.
