@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--All images used are from https://pixabay.com/ -->
+<head>
+<meta charset="UTF-8">
+<title>Hamilton Hotel - Booking</title>
+<link rel="stylesheet" type="text/css" href="../CSS/css.css">
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+</head>
+<body>
+<!-- Header at top of site, contains logo which links back to index -->
+<header>
+	<a href="../index.html"><img src="../images/logo.png" alt="Logo"></a>
+</header>
+<!-- Navigation bar -->
+<nav>
+	<a href="../index.html">Home</a>
+	<a href="../pages/rooms.html">Rooms</a>
+	<a href="../pages/about.html">About Us</a>
+	<a href="../pages/explore.html">Explore Hamilton</a>
+	<a href="../pages/book.html">Book Now</a>
+</nav>
+<br>
+<!-- Banner -->
+<figure>
+<img src="../images/book-banner.jpg" alt="Banner Image">
+</figure>
+<br><br>
+<main>
+<section>
+	<h1>Book a room</h1>
+	 <fieldset>
+        <legend>Booking</legend>
+        <label for="name_field">Full Name:</label><br>
+        <input type="text" id="name_field" name="name_value" >
+        <br>
+        <label for="email_field">Email Address:</label><br>
+        <input type="email" id="email_field" name="email_value" >
+        <br>
+        <label for="phone_field">Phone Number:</label><br>
+        <input type="text" id="phone_field" name="phone_value" >
+        <br>
+		Address:<br>
+		<!--Address stuff from the user-profile-form example from comp233 files-->
+        <label for="street_field">Street number and name</label><br>
+        <input type="text" id="street_field" name="street_value" >
+        <br >
+        <label for="town_field">Town or city</label><br>
+        <input type="text" id="town_field" name="town_value" >
+        <br >
+        <label for="postcode_field">Postal code</label><br>
+        <input type="text" id="postcode_field" name="postcode_value" ><br>
+        Room Type:<br>
+        <label for="studio_option">Studio</label>
+        <input type="radio"  id="studio_option" name="room_value" value="studio" checked>
+        <label for="one_bedroom_unit_option">One Bedroom Unit</label>
+        <input type="radio" id="one_bedroom_unit_option" name="room_value" value="one_bedroom_unit"  >
+        <label for="two_bedroom_unit_option">Two Bedroom Unit</label>
+        <input type="radio" id="two_bedroom_unit_option" name="room_value" value="two_bedroom_unit"  >
+        <br>
+        <label for="start_date">Start Date:</label><br>
+        <input type="date" id="start_date" name="start_date_value">
+		<br>
+        <label for="end_date">End Date:</label><br>
+        <input type="date" id="end_date" name="end_date_value">
+		<br>
+        <label for="breakfast_type">Complimentary Breakfast Type:</label><br>
+		<select id="breakfast_type" name="breakfast_value">
+			<option value = "continental">Continental</option>
+			<option value = "from the field">From the Field</option>
+			<option value = "eggs on toast">Eggs on Toast</option>
+			<option value = "none">None</option>
+		</select><br><br>
+		<input type="submit" value="Submit">
+      </fieldset>
+</section>
+<br><br>
+</main>
+</body>
+</html>
