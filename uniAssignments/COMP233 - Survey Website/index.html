@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>New Zealand Visitor Visa Application Form</title>
+	<link rel="stylesheet" type="text/css" href="./CSS/css.css">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <script src="./javascript/javascript.js"></script>
+</head>
+<body>
+	<header>
+		New Zealand Visitor Visa Application Form
+	</header>
+	<section>
+		<h1>Please fill out the following application form</h1>
+		<form action="./pages/display_form_data.html" method="GET" name="form1"  onsubmit="return formIsValid();">
+            <fieldset>
+				<legend>Section A | Principal applicant's personal details</legend>
+				<label for="passportphotoId">Attach a colour passport-size photograph of yourself. The photograph must be less than six months old. </label><br>
+				<input type="file" id="passportphotoId"  name="passportphoto"><br><br>
+				<span class="indicator">A1</span> Name as shown in passport<br>
+				<label for="lnameId">Family/last name</label> <br>
+				<input type="text" id="lnameId" name="lname" placeholder="Family/last name" onblur="validateLName()" style="width:50%;"> <br>
+				<label for="fnameId">Given/first name(s)</label> <br>
+				<input type="text" id="fnameId" name="fname" placeholder="Given/first name(s)" onblur="validateFName()"  style="width:50%;"> <br><br>
+				
+				<span class="indicator">A2</span> Preferred title <br>
+				<input type="radio" id="mrId" name="title" checked onclick="radioSelectionTitle()"><label for="mrId">Mr</label> 
+				<input type="radio" id="mrsId" name="title"  onclick="radioSelectionTitle()"><label for="mrsId"> Mrs</label> 
+				<input type="radio" id="msId" name="title"  onclick="radioSelectionTitle()"><label for="msId"> Ms</label> 
+				<input type="radio" id="missId" name="title"  onclick="radioSelectionTitle()"><label for="missId"> Miss</label> 
+				<input type="radio" id="drId" name="title"  onclick="radioSelectionTitle()"><label for="drId"> Dr</label> 
+				<input type="radio" id="othertitleId" name="title"  onclick="radioSelectionTitle()"><label for="othertitleId"> other (specify)</label> 
+                <div id="othertitlebox"><input type="text" id="othertitleText" name="othertitle"></div><br><br>
+				
+				<label for="othernameID"><span class="indicator">A3</span> Other names you are known by or have ever been known by</label><br>
+				<input type="text" id="othernameID" name="othername" style="width:70%;" placeholder="Other names" > <br><br>
+				
+				<span class="indicator">A4</span> Gender <br>
+				<input type="radio" id="maleId" name="gender" checked><label for="maleId">Male</label> 
+				<input type="radio" id="femaleId" name="gender"><label for="femaleId">Female</label><br><br> 
+				
+				<label for="dobId"><span class="indicator">A5</span> Date of birth<br></label>
+				<input type="date" id="dobId" name="dob" onblur="validateDOB()"><br><br>
+				
+				<label for="cityofbirthId"><span class="indicator">A6</span>Town/city of birth </label>
+				<input type="text" id="cityofbirthId" name="cityofbirth" style="width:50%;" onblur="validateCityOB()" placeholder="Town/city of birth" > <br>
+				<label for="countryofbirthId">Country of birth </label>
+				<input type="text" id="countryofbirthId" name="countryofbirth" style="width:50%;" onblur="validateCountryOB()" placeholder="Country of birth" > <br><br>
+				
+				<span class="indicator">A7</span> Passport details<br>
+				<label for="passportnumId">Number </label>
+				<input type="text" id="passportnumId" name="passportnum" style="width:50%;" onblur="validatepassportnum()" placeholder="Passport number" > <br>
+				<label for="passportcountryId">Country </label>
+				<input type="text" id="passportcountryId" name="passportcountry" style="width:50%;" onblur="validatepassportcountry()" placeholder="Passport country" > <br>
+				<label for="passportexpId">Expiry Date</label>
+				<input type="date" id="passportexpId" name="passportexp" onblur="validatepassportexp()"><br><br>
+				
+				<label for="citizenshipId"><span class="indicator">A8</span>Other citizenships you hold </label>
+				<input type="text" id="citizenshipId" name="citizenship" style="width:50%;" placeholder="Other citizenships" > <br><br>
+				
+				<span class="indicator">A9</span>Partnership Status <br>
+				<input type="radio" id="singleId" name="partnership" checked><label for="singleId">Single</label> 
+				<input type="radio" id="marriedId" name="partnership"><label for="marriedId"> Married/in civil union</label> 
+				<input type="radio" id="separatedId" name="partnership"><label for="separatedId">Separated</label> 
+				<input type="radio" id="engagedId" name="partnership"><label for="engagedId">Engaged</label> 
+				<input type="radio" id="Partnerid" name="partnership"><label for="Partnerid">Partner</label> 
+				<input type="radio" id="Widowedid" name="partnership"><label for="Widowedid">Widowed</label> 
+				<input type="radio" id="Divorcedid" name="partnership"><label for="Divorcedid">Divorced</label> 
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Section B | Contact details</legend>
+				<span class="indicator">B1</span> Your current residential address.<br>
+				<label for="residentaddressId1">Address </label>
+				<input type="text" id="residentaddressId1" name="residentaddress1" style="width:70%;" onblur="validateaddress()" placeholder="Address Line 1" > <br>
+				<input type="text" id="residentaddressId2" name="residentaddress2" style="width:70%;" placeholder="Address Line 2" > <br>
+				<label for="landlineId">Telephone(landline) </label>
+				<input type="text" id="landlineId" name="landline" onblur="validatetelephone()" placeholder="Landline phone number" > 
+				<label for="mobileId">Telephone(mobile) </label>
+				<input type="text" id="mobileId" name="mobile" onblur="validatetelephone()" placeholder="Mobile phone number" > <br>
+				<label for="residentialemailId">Email</label>
+				<input type="email" name="residentialemail" id="residentialemailId" onblur="validateresidentialemail()" placeholder="Email address" ><br><br>
+				
+				<span class="indicator">B2</span> If you are currently in New Zealand, your most recent overseas address.<br>
+				<label for="overseasaddressId1">Address </label>
+				<input type="text" id="overseasaddressId1" name="overseasaddress1" style="width:70%;" placeholder="Address line 1" > <br>
+				<input type="text" id="overseasaddressId2" name="overseasaddress2" style="width:70%;" placeholder="Address line 2" > <br><br>
+				
+				
+				<span class="indicator">B3</span>Name and address for communication about this application.<br>
+				<input type="radio" id="B1Id" name="communicationaddress" checked onclick="radioSelectionComm()"><label for="B1Id">Same as address at <span class="indicator">B1</span>.</label> 
+				<input type="radio" id="B2Id" name="communicationaddress" onclick="radioSelectionComm()"><label for="B2Id">Same as address at <span class="indicator">B2</span>.</label> 
+				<input type="radio" id="asbelowId" name="communicationaddress" onclick="radioSelectionComm()"><label for="asbelowId">or fill as below</label> 
+				<div id="otheraddressbox">
+					<label for="contactnameId">Name of contact person</label>
+					<input type="text" id="contactnameId" name="contactname" style="width:70%;" onblur="validatecontactname()"  placeholder="Contact name" disabled> <br>
+					<label for="contactaddressId1">Organisation name (if applicable) and address </label>
+					<input type="text" id="contactaddressId1" name="contactaddress1" style="width:70%;" onblur="validateotheraddress()" disabled  placeholder="Address line 1" > <br>
+					<input type="text" id="contactaddressId2" name="contactaddress2" style="width:70%;" disabled placeholder="Address line 2" > <br>
+					<label for="landlineId">Telephone(daytime) </label>
+					<input type="text" id="daytimeteleId" name="daytimetele" disabled onblur="validateothertelephone()" placeholder="Day phone number" > 
+					<label for="eveningId">Telephone(mobile) </label>
+					<input type="text" id="eveningId" name="evening" disabled onblur="validateothertelephone()" placeholder="Evening phone number" > <br>
+					<label for="residentialemailId">Email</label>
+					<input type="email" name="contactemail" id="contactemailId" disabled onblur="validateotheremail()" placeholder="Contact email address" >
+				</div>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Section L | Paying your application fee and immigration levy</legend>
+				<a href="http://www.immigration.govt.nz/fees">To find out how much the fee and immigration levy is and where to send your application, use our office and fees finder here.</a>
+				<br>
+				<b>Note:</b> some offshore offices do not accept credit cards.  The office and fees finder contains information about alternative methods of payment.
+				<br>
+				<h4>Your application fee and immigration levy</h4>
+				Amount you are paying:<br>	
+				<label for="amountId">$</label>
+				<!-- step="0.01" allows dots to be put in the number box-->
+				<input type="number" step="0.01" id="amountId" name="amount" onblur="validateamount()">
+				<!-- following drop down copied and slightly edited from https://gist.github.com/adidac/5329386-->
+				<select name="currency_code">
+				  <option value="AUD">AUD</option>
+				  <option value="BRL">BRL </option>
+				  <option value="CAD">CAD</option>
+				  <option value="CZK">CZK</option>
+				  <option value="DKK">DKK</option>
+				  <option value="EUR">EUR</option>
+				  <option value="HKD">HKD</option>
+				  <option value="HUF">HUF </option>
+				  <option value="ILS">ILS</option>
+				  <option value="JPY">JPY</option>
+				  <option value="MYR">MYR</option>
+				  <option value="MXN">MXN</option>
+				  <option value="NOK">NOK</option>
+				  <option value="NZD" SELECTED="selected">NZD</option>
+				  <option value="PHP">PHP</option>
+				  <option value="PLN">PLN</option>
+				  <option value="GBP">GBP</option>
+				  <option value="SGD">SGD</option>
+				  <option value="SEK">SEK</option>
+				  <option value="CHF">CHF</option>
+				  <option value="TWD">TWD</option>
+				  <option value="THB">THB</option>
+				  <option value="TRY">TRY</option>
+				  <option value="USD">USD</option>
+				</select>
+				
+				<h4>Preferred methods of payment</h4>
+				<input type="radio" id="chequeId" name="payment"  checked onclick="radioSelectionPayment()"><label for="chequeId">Bank cheque/bank draft</label> 
+				<input type="radio" id="mastercardId" name="payment"  onclick="radioSelectionPayment()">
+				<label for="mastercardId">Mastercard</label> 
+				<input type="radio" id="visaId" name="payment"  onclick="radioSelectionPayment()">
+				<label for="visaId">Visa</label> <br>
+				<input type="radio" id="switchId" name="payment"  onclick="radioSelectionPayment()">
+				<label for="switchId">SWITCH Card (UK Only)</label> 
+                <div id="switchbox"><input type="text" id="switchnumberid" name="switchnumber"  pattern="[0-9]{3}" style="width: 3em" disabled onblur="validateswitch()" placeholder="---" >SWITCH card issue number</div><br>
+				<br>
+                <div id="chequebox"><label for="chequephotoId">Upload a photo or image scan of your bank cheque/bank draft. </label><br>
+				<input type="file" id="chequephotoId"  name="chequephoto"></div>
+				
+                <div id="creditcardbox"><label for="cardNameId">Name of cardholder </label>
+				<input type="text" id="cardNameId" name="cardName" style="width:70%;" disabled onblur="validatecardname()" placeholder="Name on card" > <br>
+				<label for="cardNumberId">Card number </label>
+				<input type="number" id="cardNumberId" name="cardNumber" style="width:18em" onblur="validatecardnumber()" disabled placeholder="Card number" > 
+				<label for="cvcId">CVC/CVV number </label>
+				<input type="text" id="cvcId" name="cvc" required pattern="[0-9]{3}" style="width:3em" onblur="validatecvcId()" disabled placeholder="---" > <br>
+				Note: Your CVC/CVV number is the three-digit number found on the signature strip on the back of your credit card.<br>
+				<label for="cardexpId">Expiry date</label>
+				<input type="month" id="cardexpId" name="cardexp" onblur="validatecardexp()" disabled></div>
+				<br><br>
+			</fieldset>
+            <input type="submit" value="Submit"> 
+            <input type="reset" value="Reset Form"> 
+		</form>
+	</section>
+</body>
+</html>
