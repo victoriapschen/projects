@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>COMP333 Assignment 1</title>
+	<link rel="stylesheet" type="text/css" href="./CSS/css.css">
+    	<script src = "./JS/myscript.js"></script>
+</head>
+<body>
+<header>
+<h1>COMP333 Assignment 1</h1>
+</header>
+<section id="users">
+<h2>Online Users</h2>
+<span id="online">
+Loading...
+</span>
+<h2>Offline Users</h2>
+<span id="offline">
+Loading...
+</span>
+</section>
+<div id="center">
+	<h1>Login</h1>
+	<form id='loginform' name='loginform' method='POST'>
+		Username <input type='text' name='username'> <br>
+		Password <input id="password" type='password' name='password'> <br><br>
+	</form>
+		<button type="button" onClick="login()">Login</button> <br>
+		<button type="button" onClick="register()">Register with these details.</button> <br>
+
+		<span id=logintext></span><!--for ajax result--><br>
+</div>
+</body>
+</html>
