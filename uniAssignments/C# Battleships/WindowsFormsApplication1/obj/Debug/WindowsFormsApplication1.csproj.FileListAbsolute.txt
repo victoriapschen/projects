@@ -12,3 +12,6 @@ C:\Users\13ulbasaur\Documents\University\COMP104\Battleships\WindowsFormsApplica
 C:\Users\13ulbasaur\Documents\University\COMP104\Battleships\Battleships\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 C:\Users\13ulbasaur\Documents\University\COMP104\Battleships\Battleships\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\13ulbasaur\Documents\University\COMP104\Battleships\Battleships\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\13ulbasaur\Documents\projects\uniAssignments\C# Battleships\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\13ulbasaur\Documents\projects\uniAssignments\C# Battleships\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\13ulbasaur\Documents\projects\uniAssignments\C# Battleships\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
